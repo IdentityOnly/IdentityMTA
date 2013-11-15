@@ -1,0 +1,13 @@
+{
+    "name": "identityonly/identity-mta",
+    "description": "MTA for IdentityOnly",
+    "authors": [
+        {
+            "name": "Justin Martin",
+            "email": "frozenfire@thefrozenfire.com"
+        }
+    ],
+    "require": {
+        
+    }
+}
