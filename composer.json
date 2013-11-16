@@ -7,6 +7,7 @@
             "email": "frozenfire@thefrozenfire.com"
         }
     ],
+    "type": "zend-module",
     "require": {
         "composer/installers": "~1.0.0"
     }
