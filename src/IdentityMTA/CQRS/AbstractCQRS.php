@@ -6,6 +6,8 @@ use Zend\Stdlib\Hydrator\Filter;
 
 use Zend\EventManager\EventManager;
 
+use DateTime;
+
 /**
  * An abstract Command Query Responsibility Segregation, serializable for
  * persistence.

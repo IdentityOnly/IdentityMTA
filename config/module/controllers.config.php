@@ -1,4 +1,6 @@
 <?php
 return array(
-    'IdentityMTA\Controller\Receiver' => 'IdentityMTA\Controller\Receiver',
+    'invokables' => array(
+        'IdentityMTA\Controller\Receiver' => 'IdentityMTA\Controller\Receiver',
+    )
 );
