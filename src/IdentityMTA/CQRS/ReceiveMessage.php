@@ -1,23 +1,48 @@
 <?php
 namespace IdentityMTA\CQRS;
 
-use Zend\Mail\Message;
+use IdentityCommon\Entity;
+use IdentityCommon\Service;
 
 class ReceiveMessage extends AbstractCQRS
 {
+    protected $messageService;
+
     protected $message;
+    
+    public function __construct(Service\Message $messageService)
+    {
+        parent::__construct();
+        
+        $this->setMessageService($messageService);
+    }
 
     public function execute() {
+        $messageService = $this->getMessageService();
         $message = $this->getMessage();
     
-        file_put_contents(__DIR__.'/../../../data/received.txt', var_export($message, true));
+        $receivedMessage = new Entity\ReceivedMessage;
+        $receivedMessage->setContent($message);
+        
+        $message = $messageService->saveReceivedMessage($message);
+        
+        return $message;
+    }
+    
+    public function getMessageService() {
+        return $this->messageService;
+    }
+    
+    public function setMessageService($messageService) {
+        $this->messageService = $messageService;
+        return $this;
     }
     
     public function getMessage() {
         return $this->message;
     }
     
-    public function setMessage(Message $message) {
+    public function setMessage($message) {
         $this->message = $message;
         return $this;
     }

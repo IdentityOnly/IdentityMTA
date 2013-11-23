@@ -1,0 +1,13 @@
+Received: from example.com (localhost.localdomain [127.0.0.1])
+	by identityonly (Haraka/2.2.6) with ESMTP id ACC5045D-C8EB-40F7-9AA4-C686A99962FB.1
+	envelope-from <test@example.com>;
+	Fri, 22 Nov 2013 21:35:08 +0000
+Date: Fri, 22 Nov 2013 21:35:08 +0000
+To: recipient@identityonly.com
+From: test@example.com
+Subject: test Fri, 22 Nov 2013 21:35:08 +0000
+X-Mailer: swaks v20120320.0 jetmore.org/john/code/swaks/
+
+This is a test mailing
+
+

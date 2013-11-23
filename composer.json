@@ -15,7 +15,6 @@
     ],
     "type": "zend-module",
     "require": {
-        "composer/installers": "~1.0",
-        "identityonly/identity-common": "dev-master"
+        "composer/installers": "~1.0"
     }
 }
