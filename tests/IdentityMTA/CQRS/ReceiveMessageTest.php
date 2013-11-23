@@ -11,6 +11,8 @@ class ReceiveMessageTest extends TestCase
      */
     public function testExecute($content) {
         $instance = $this->getInstance();
+        $instance->getMessageService()->expects($this->any())
+            ->method('saveReceivedMessage');
         $instance->setMessage($content);
         
         $message = $instance->execute();
@@ -30,6 +32,10 @@ class ReceiveMessageTest extends TestCase
     }
     
     protected function getInstance() {
-        return Bootstrap::getServiceManager()->get('IdentityMTA\CQRS\ReceiveMessage');
+        $messageService = $this->getMock('IdentityCommon\Service\Message');
+    
+        return new ReceiveMessage(
+            $messageService
+        );
     }
 }

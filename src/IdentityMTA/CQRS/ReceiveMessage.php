@@ -24,7 +24,7 @@ class ReceiveMessage extends AbstractCQRS
         $receivedMessage = new Entity\ReceivedMessage;
         $receivedMessage->setContent($message);
         
-        $message = $messageService->saveReceivedMessage($message);
+        $message = $messageService->saveReceivedMessage($receivedMessage);
         
         return $message;
     }

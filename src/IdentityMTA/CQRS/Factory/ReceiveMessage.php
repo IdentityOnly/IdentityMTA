@@ -10,6 +10,8 @@ class ReceiveMessage implements FactoryInterface
 {
     public function createService(ServiceLocatorInterface $serviceLocator)
     {
-        return new CQRS\ReceiveMessage;
+        $messageService = $serviceLocator->get('IdentityCommon\Service\Message');
+    
+        return new CQRS\ReceiveMessage($messageService);
     }
 }

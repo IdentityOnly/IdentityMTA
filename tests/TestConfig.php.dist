@@ -1,6 +1,7 @@
 <?php
 return array(
     'modules' => array(
+        'IdentityCommon',
         'IdentityMTA'
     ),
     'module_listener_options' => array(
