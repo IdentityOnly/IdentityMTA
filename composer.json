@@ -7,6 +7,12 @@
             "email": "frozenfire@thefrozenfire.com"
         }
     ],
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "http://packages.identityonly.com"
+        }
+    ],
     "type": "zend-module",
     "require": {
         "composer/installers": "~1.0",
