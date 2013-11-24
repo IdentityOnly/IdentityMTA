@@ -3,6 +3,7 @@ namespace IdentityMTA\CQRS;
 
 use IdentityCommon\Entity;
 use IdentityCommon\Service;
+use IdentityCommon\CQRS\AbstractCQRS;
 
 class ReceiveMessage extends AbstractCQRS
 {
